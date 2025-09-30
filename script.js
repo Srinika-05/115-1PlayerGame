@@ -31,5 +31,7 @@ function handleClick(){
     document.getElementById("userInput").value = "";
     
     document.getElementById("quantity").value = maxCount--;
-    
+
+    for (exp1; exp2; exp3;
+    x=20
 }
