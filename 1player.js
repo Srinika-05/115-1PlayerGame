@@ -1,24 +1,31 @@
+var guessCount = 0;
+var maxCount = 5;
+var secretNumber = randomizer();
+
+function randomizer(){
+    const min = 1;
+    const max = 50;
+    return Math.floor( (Math.random() * (max - min + 1)) + min );
+}
 function playerGuess(){
+    alert(secretNumber);
     if (guessCount>=4) {
         alert("Max guess reached - you lost");
-        secretNumber = 0;
-
     }
 
-    var inputSecretNum = parseInt(secretNumber);
-    const userInput = parseInt(document.getElementById("userInput").value);
-    const label = document.getElementById("label");
+    const userInput = parseInt(document.getElementById("guess1").value);
+    const label = document.getElementById("valueCorrectness");
     guessCount = guessCount+1;
  
     if (isNaN(userInput) || userInput == '')
     {
         alert("Input should be numerical")
     }
-    if (inputSecretNum === userInput){
+    if (secretNumber === userInput){
         alert("You won!");
         label.innerHTML = "";
     }
-    if(inputSecretNum < userInput){
+    if(secretNumber < userInput){
         label.innerHTML = "Incorrect Guess, Try Lower";
     }else{
          label.innerHTML = "Incorrect Guess, Try Higher";
@@ -29,4 +36,3 @@ function playerGuess(){
     document.getElementById("quantity").value = maxCount--;
     
 }
-
