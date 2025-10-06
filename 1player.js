@@ -1,6 +1,7 @@
 var guessCount = 0;
 var maxCount = 5;
 var secretNumber = randomizer();
+var timer = new minute("1.30").gettime();
 
 function randomizer(){
     const min = 1;
