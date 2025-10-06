@@ -3,7 +3,7 @@
 <head>
     <style>
     body { 
-        background-image: url('img beach.jpg');
+        background-image: url('/images/beach.jpg');
     }
     </style>
     <style>
@@ -16,13 +16,18 @@
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>1 Player Game</title>
 </head>
 <body>
+    <script src="1player.js"></script>
    <label for="uguess">Enter a number</label>
    <input
    type="text"
    name="guess"
    id="guess1"
    placeholder="Enter a number"/>
-   <input type="button" value="guess">
+   <input type="button" value="guess" onClick="playerGuess()"><br>
+   <label id="valueCorrectness"></label><br>
+   <label for="guessCount">Guesses Left</label>
+   <input type="number" id="quantity" min="0" max="5" >
+   </body>
